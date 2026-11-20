@@ -4,9 +4,12 @@ import Header from './Header.js'
 import Tablero from './Tablero.js'
 import { useState } from 'react';
 
+const X = "X";
+const O = "O";
+
 function App() {
-  const [turno,setTurno] = useState("");
-  const [tab,setTab] = useState("[[-,-,-],[-,-,-],[-,-,-]]");
+  const [turno,setTurno] = useState(X);
+  const [tab,setTab] = useState([["-","-","-"],["-","-","-"],["-","-","-"]]);
   
   function pulsar(user,row,column){
     if(turno === "X"){

@@ -3,10 +3,10 @@ export default function Tablero(props){
         <div id="tablero">
            { props.estado.map((r,i)=>{
                 return(
-                    <div id="fila" key="i">
+                    <div id="fila" key={i}>
                        { r.map((c,j)=>{
                             return(
-                                    <button key="j">{c}</button>      
+                                    <button key={j} onClick={()=>props.onClick(props.turno,i,j)}>{c}</button>      
                         )})
                     }</div>
                 )})

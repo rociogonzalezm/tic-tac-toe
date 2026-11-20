@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Header turno={turno}/>
-      <Tablero estado={tab} onClick={pulsar}/>
+      <Tablero estado={tab} onClick={()=>pulsar(turno,1,1)}/>
       
       
     </div>
